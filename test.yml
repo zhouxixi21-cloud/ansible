@@ -1,4 +1,4 @@
 - hosts: 47.56.86.153
   tasks:
     - name: install ansible
-      yum: name=ansible state=latest
+      yumsss: name=ansible state=latest
