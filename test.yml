@@ -1,4 +1,12 @@
 - hosts: 47.56.86.153
+  remote_user: root
   tasks:
-    - name: install ansible
-      yum: name=ansible state=latest
+    - name: copy file
+      copy: src={{path}}/{{filename}} dest=/opt/hana
+    - name: read copy file
+      shell: cat /opt/hana/{{filename}}
+      register: data
+    - name: show file
+      debug:
+         msg:{{data.stdout}}
+ 
