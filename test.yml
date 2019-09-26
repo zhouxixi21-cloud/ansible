@@ -8,5 +8,5 @@
       register: data
     - name: show file
       debug:
-         msg:{{data.stdout}}
+         msg: {{data.stdout}}
  
