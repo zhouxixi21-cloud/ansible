@@ -1,5 +1,4 @@
 - hosts: 47.56.86.153
-  remote_user: root
   tasks:
     - name: copy file
       copy: src={{path}}/{{filename}} dest=/opt/hana
