@@ -4,5 +4,5 @@
     - name: copy file
       copy: src={{path}}/{{filename}} dest=/opt/hana
       register: result
-    - command: mkdir test
-      when: result|changed 
+    - command: mkdir /opt/hana/test
+      when: result is changed 
