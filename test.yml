@@ -3,10 +3,3 @@
   tasks:
     - name: copy file
       copy: src={{path}}/{{filename}} dest=/opt/hana
-    - name: read copy file
-      shell: cat /opt/hana/{{filename}}
-      register: data
-    - name: show file
-      debug:
-         msg: "{{data.stdout}}"
- 
