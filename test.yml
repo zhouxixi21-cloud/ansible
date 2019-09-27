@@ -3,3 +3,6 @@
   tasks:
     - name: copy file
       copy: src={{path}}/{{filename}} dest=/opt/hana
+      register: result
+    - command: echo "helloworld"
+      when: result|changed 
