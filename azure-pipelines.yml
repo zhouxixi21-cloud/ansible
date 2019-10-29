@@ -15,10 +15,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: JenkinsQueueJob@2
+- task: JenkinsDownloadArtifacts@1
   inputs:
-    serverEndpoint: 'wq'
+    jenkinsServerConnection: 'wq'
     jobName: 'test'
-    captureConsole: true
-    capturePipeline: true
-    isParameterizedJob: false
+    saveTo: 'jenkinsArtifacts'
+    jenkinsBuild: 'LastSuccessfulBuild'
